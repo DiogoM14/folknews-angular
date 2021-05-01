@@ -9,6 +9,7 @@
   margin: 0 auto;
   max-width: 1787px;
   padding: 2rem 2rem 0;
+  background: var(--background);
 }
 
 header {
@@ -19,19 +20,21 @@ header {
   .logo {
     font-size: 2rem;
     font-weight: 500;
-    padding: 0.3rem 0.5rem;
+    padding: 0.3rem 0.75rem;
     background: var(--title);
     color: var(--white);
     border-radius: 12px;
   }
+
   .menu {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
 
     ul {
       display: flex;
       align-items: center;
       list-style: none;
+      margin: 0;
 
       li {
         margin: 0 1rem;
@@ -46,6 +49,7 @@ header {
           background: var(--background);
         }
       }
+
       .selected {
         color: var(--highlight);
       }
@@ -57,15 +61,16 @@ header {
   display: flex;
   width: 100%;
   margin: 3rem 0;
+  justify-content: center;
 
   input {
     max-width: 615px;
     width: 100%;
     height: 2.5rem;
     border: 1px solid var(--stroke);
-    margin: 0 auto;
     background: var(--white);
     padding: 0 1rem;
+    border-radius: 5px;
   }
 }
 
@@ -96,7 +101,6 @@ header {
     background: #2B2B2B;
     width: 100%;
     height: 1px;
-
     opacity: 0.5;
   }
 }
@@ -122,18 +126,16 @@ header {
 
   p.card-provider  {
     max-width: 90%;
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: #333333;
-    margin-left: 10px;
-
-    align-items: center;
+    color: var(--title);
+    // align-items: center;
   }
 
   .card-title {
     max-width: 90%;
-    font-size: 24px;
-    color: #C62828;
+    font-size: 1.5rem;
+    color: var(--highlight);
   }
 
   .card-text {
@@ -181,7 +183,7 @@ header {
   }
 
 }
-.card.card:hover .click {
+.card:hover .click {
   opacity: 1;
 }
 
