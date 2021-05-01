@@ -1,5 +1,91 @@
-<div>
-    <header>
-        <h1>ola</h1>
-    </header>
+<div class="container">
+  <header>
+    <div class="logo">
+      FolkNews
+    </div>
+
+    <div class="menu">
+      <ul>
+        <li class="selected">Popular</li>
+        <li>Economia</li>
+        <li>Sociedade</li>
+        <li>Desporto</li>
+        <li>
+          <button mat-button [matMenuTriggerFor]="menu">Outros</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Saúde</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+        </li>
+      </ul>
+      <div class="avatar">
+        <img src="https://www.google.com/search?q=pessoa&sxsrf=ALeKk039hWS1OO__yfuLW_v8coYCsl-m2g:1619719658017&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjV7uf2haTwAhU7URUIHffYAHQQ_AUoAXoECAEQAw&biw=1272&bih=936#imgrc=Xh7BWWEtT3ewHM" alt="">
+      </div>
+    </div>
+  </header>
+
+  <div class="search-bar">
+    <input placeholder="Pesquise noticias..." type="text" >
+  </div>
+
+  <div class="carousel">
+    <ngb-carousel *ngIf="images">
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[0]" alt="Random first slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>First slide label</h3>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[1]" alt="Random second slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>Second slide label</h3>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper">
+          <img [src]="images[2]" alt="Random third slide">
+        </div>
+        <div class="carousel-caption">
+          <h3>Third slide label</h3>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+
+  <div class="divider">
+    <img src="./assets/icon-separate1.svg" alt="">
+    <h1>Ultimas</h1>
+    <hr>
+  </div>
+
+  <div class="card mb-3" style="max-width: 100%; margin: 58px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="./assets/alfa.jpg" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <div class="click">
+            <img src="./assets/right-arrow.svg" alt="">
+          </div>
+          <p class="card-provider">
+            MotorSport Brasil
+          </p>
+          <p class="card-title">Alfa Romeo continua na fórmula 1 em 2021</p>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reiciendis quaerat aliquam voluptate minus eos! In eius assumenda quos sint alias. Beatae inventore numquam repellat impedit in alias porro molestias? Lorem ipsum dolor sit amet</p>
+          <p class="card-text"><small class="text-muted">Há 3 horas - MotorSport Brasil</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer>
+  <h2>FolkNews</h2>
+  <p>&copy; Copyright FolkNews S.A.</p>
+</footer>
 </div>

@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'folknews-angular';
+  images = [944, 1011, 984].map((n) => `https://imagens.publico.pt/imagens.aspx/1579867?tp=UH&db=&type=`);
 }
