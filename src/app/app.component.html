@@ -21,6 +21,14 @@
     </div>
   </header>
 
+  <mat-drawer-container class="example-container">
+    <mat-drawer #drawer >I'm a drawer</mat-drawer>
+    <mat-drawer-content>
+
+      <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+    </mat-drawer-content>
+  </mat-drawer-container>
+
   <div class="search-bar">
     <input placeholder="Pesquise noticias..." type="text" >
   </div>
@@ -60,7 +68,7 @@
     <hr>
   </div>
 
-  <div class="card" style="max-width: 100%; margin: 58px;">
+  <div class="card">
     <div class="row no-gutters">
       <div class="col-md-4">
         <img src="./assets/alfa.jpg" class="card-img" alt="...">
@@ -81,8 +89,29 @@
     </div>
   </div>
 
+  <div class="card">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <img src="./assets/alfa.jpg" class="card-img" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <div class="click">
+            <img src="./assets/right-arrow.svg" alt="">
+          </div>
+          <p class="card-provider">
+            MotorSport Brasil
+          </p>
+          <p class="card-title">Alfa Romeo continua na fórmula 1 em 2021</p>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus reiciendis quaerat aliquam voluptate minus eos! In eius assumenda quos sint alias. Beatae inventore numquam repellat impedit in alias porro molestias? Lorem ipsum dolor sit amet</p>
+          <p class="card-text"><small class="text-muted">Há 3 horas - MotorSport Brasil</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 <footer>
   <h2>FolkNews</h2>
   <p>&copy; Copyright FolkNews S.A.</p>
 </footer>
-</div>
