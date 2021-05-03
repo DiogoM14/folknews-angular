@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class CategoryService {
   constructor(private http: HttpClient) { }
 
-  getCategoryNews() {
-    return this.http.get('https://www.publico.pt/api/list/popular')
+  getCategoryNews(queryName: string) {
+    return this.http.get(`https://www.publico.pt/api/list/${queryName}`)
   }
 }

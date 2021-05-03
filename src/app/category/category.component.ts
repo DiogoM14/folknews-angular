@@ -9,11 +9,26 @@ import { CategoryService } from './category.service';
 export class CategoryComponent implements OnInit {
 
   news: any
+  // queryName: string
 
   constructor(private categoryService: CategoryService) { }
 
   ngOnInit(): void {
-    this.categoryService.getCategoryNews()
-      .subscribe(response => this.news = response)
+    this.getCategoryNews();
+  }
+
+  getCategoryNews(queryName: string = 'popular') {
+    this.categoryService.getCategoryNews(queryName)
+      .subscribe(response => this.news = response
+    )
+  }
+
+  selectedCategory(queryName: string) {
+    queryName = queryName;
+
+    console.log(queryName)
+
+    // Erro aqui
+    this.getCategoryNews(queryName);
   }
 }
