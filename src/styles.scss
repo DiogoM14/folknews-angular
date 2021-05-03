@@ -33,6 +33,8 @@ $folknews-angular-theme: mat-light-theme((
 // that you are using.
 @include angular-material-theme($folknews-angular-theme);
 
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
 
 * {
     margin: 0;
@@ -45,7 +47,7 @@ $folknews-angular-theme: mat-light-theme((
     --title: #333333;
     --text: #555555;
     --white: #fff;
-    --bakground: #F2F2F2;
+    --background: #F2F2F2;
     --stroke: #C7C7C7;
 }
 
@@ -61,8 +63,8 @@ $folknews-angular-theme: mat-light-theme((
     }
 }
 
-body {
-    background: var(--bakground);
+body, html {
+    background: var(--background);
     color: var(--title);
 }
 
@@ -87,5 +89,3 @@ a {
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';

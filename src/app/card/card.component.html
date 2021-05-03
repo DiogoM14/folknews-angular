@@ -1,0 +1,18 @@
+<div class="card" *ngFor="let new of news">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="{{ new.multimediaPrincipal }}" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <div class="click">
+          <img src="./assets/right-arrow.svg" alt="">
+        </div>
+        <p class="card-provider">{{ new.autores[0].nome }}</p>
+        <p class="card-title">{{ new.titulo }}</p>
+        <p class="card-text">{{ new.descricao }}</p>
+        <p class="card-text"><small class="text-muted">{{ new.data | date:'yyyy-MM-dd' }} - {{ new.autores[0].nome }}</small></p>
+      </div>
+    </div>
+  </div>
+</div>

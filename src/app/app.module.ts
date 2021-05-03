@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material/menu';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 import {ClipboardModule} from '@angular/cdk/clipboard';
 import {DragDropModule} from '@angular/cdk/drag-drop';
@@ -51,12 +53,28 @@ import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { CardComponent } from './card/card.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { CategoryComponent } from './category/category.component';
+import { DividerComponent } from './divider/divider.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { CategoryService } from './category/category.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    CardComponent,
+    CarouselComponent,
+    CategoryComponent,
+    DividerComponent,
+    SearchBarComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -106,7 +124,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PortalModule,
     ScrollingModule,
   ],
-  providers: [],
+  providers: [CategoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

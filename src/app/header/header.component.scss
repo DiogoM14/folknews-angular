@@ -1,0 +1,47 @@
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 0.3rem 0.5rem;
+    background: var(--title);
+    color: var(--white);
+    border-radius: 12px;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+
+      li {
+        margin: 0 1rem;
+        font-weight: 500;
+        font-size: 1.5rem;
+
+        button {
+          border: none;
+          font-weight: 500;
+          font-size: 1.5rem;
+          color: var(--title);
+          background: none;
+          padding: 0;
+
+          &:hover {
+            background: none;
+          }
+        }
+      }
+      .selected {
+        color: var(--highlight);
+      }
+    }
+  }
+}
