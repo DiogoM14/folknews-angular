@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CardService } from '../card/card.service';
 
 @Component({
   selector: 'app-news-page',
@@ -8,11 +9,16 @@ import { Component, Input, OnInit } from '@angular/core';
 
 export class NewsPageComponent implements OnInit {
 
-  @Input() filteredNews: any = []
+  news: any
 
-  constructor() { }
+  constructor(private service: CardService) { }
 
   ngOnInit(): void {
+    // this.getNews();
   }
 
+  // getNews() {
+  //   this.service.currentData.subscribe(data => this.news = data);
+  //   console.log(this.news)
+  // }
 }

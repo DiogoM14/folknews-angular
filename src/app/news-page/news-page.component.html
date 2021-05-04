@@ -1,4 +1,4 @@
-<div class="main-container" *ngFor="let new of filteredNews">
+<div class="main-container" *ngFor="let new of news">
   <app-header></app-header>
 
   <app-search-bar></app-search-bar>
@@ -6,12 +6,12 @@
   <h1>{{ new.titulo }}</h1>
   <hr>
 
-  <p>Equipa mantém intenção de “aliar experiência e juventude” no elenco para a próxima época.</p>
+  <p>{{ new.descricao }}</p>
 
   <article>
 
     <div class="card" style="width: 18rem;">
-      <img src="./assets/alfa.jpg" class="card-img-top" alt="F1 alfa romeo">
+      <img src="{{ new.multimediaPrincipal }}" class="card-img-top" alt="F1 alfa romeo">
       <div class="card-body">
         <p class="card-autor">MotorSport Brasil</p>
         <p class="card-text">21/12/2020 09h36 - Atualizado há 3 horas</p>
@@ -26,7 +26,7 @@
     </p>
 
     <div class="image">
-      <img src="./assets/alfa.jpg" alt="">
+      <img src="{{ new.multimediaPrincipal }}" alt="">
       <p>REUTERS/MAXIM SHEMETOV</p>
     </div>
 

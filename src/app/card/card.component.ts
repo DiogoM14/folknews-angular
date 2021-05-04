@@ -1,12 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-interface newsProps {
-  titulo: string
-  multimediaPrincipal: string
-  autores: []
-  descricao: string
-  data: string
-}
+import { CardService } from './card.service';
 
 @Component({
   selector: 'app-card',
@@ -17,15 +10,17 @@ interface newsProps {
 export class CardComponent implements OnInit {
 
   @Input() news: any = [];
-  filteredNews: any
+  id: number = 0
 
-  constructor() { }
+  constructor(private service: CardService) { }
 
   ngOnInit(): void {
+    // this.getNews(this.id);
   }
 
-  getNewsID(news: any) {
-    const filteredNews = news
-    return filteredNews
-  }
+  // getNews(id: number) {
+  //   this.service.getNews(this.id)
+  //   .subscribe(response => this.news = response
+  //     )
+  //   }
 }

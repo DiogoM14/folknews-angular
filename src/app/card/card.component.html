@@ -3,7 +3,7 @@
     <div class="col-md-4">
       <img src="{{ new.multimediaPrincipal }}" class="card-img" alt="...">
     </div>
-    <div class="col-md-8" routerLink="/news" (click)="getNewsID(new)">
+    <div class="col-md-8" routerLink="{{ new.id }}">
       <div class="card-body">
         <div class="click">
           <img src="./assets/right-arrow.svg" alt="">
@@ -17,4 +17,3 @@
   </div>
 </div>
 
-<app-news-page [filteredNews]="filteredNews"></app-news-page>

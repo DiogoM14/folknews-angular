@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CategoryService } from './category.service';
 
 @Component({
@@ -8,27 +9,18 @@ import { CategoryService } from './category.service';
 })
 export class CategoryComponent implements OnInit {
 
-  news: any
-  // queryName: string
+  news: any = []
+  queryName = this.router.url
 
-  constructor(private categoryService: CategoryService) { }
+  constructor(private categoryService: CategoryService, private router: Router) { }
 
   ngOnInit(): void {
-    this.getCategoryNews();
+    this.getCategoryNews(this.queryName);
   }
 
-  getCategoryNews(queryName: string = 'popular') {
+  getCategoryNews(queryName: string) {
     this.categoryService.getCategoryNews(queryName)
-      .subscribe(response => this.news = response
-    )
-  }
-
-  selectedCategory(queryName: string) {
-    queryName = queryName;
-
-    console.log(queryName)
-
-    // Erro aqui
-    this.getCategoryNews(queryName);
-  }
+    .subscribe(response => this.news = response
+      )
+    }
 }
