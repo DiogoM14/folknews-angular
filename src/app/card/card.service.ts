@@ -8,7 +8,7 @@ export class CardService {
 
   constructor(private http: HttpClient) { }
 
-  getNews(id: number) {
+  getNews(id: string) {
     return this.http.get(`https://www.publico.pt/api/content/news/${id}`)
   }
 }

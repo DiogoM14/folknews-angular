@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CardService } from './card.service';
 
 @Component({
@@ -10,17 +11,19 @@ import { CardService } from './card.service';
 export class CardComponent implements OnInit {
 
   @Input() news: any = [];
-  id: number = 0
 
-  constructor(private service: CardService) { }
+  id: any
+  newsData: any
+
+  constructor(private service: CardService, private router: Router) { }
 
   ngOnInit(): void {
-    // this.getNews(this.id);
   }
 
-  // getNews(id: number) {
-  //   this.service.getNews(this.id)
-  //   .subscribe(response => this.news = response
+  // getNews(id: string) {
+  //   console.log("Rodou")
+  //   this.service.getNews(id)
+  //   .subscribe(response => this.newsData = response
   //     )
   //   }
 }

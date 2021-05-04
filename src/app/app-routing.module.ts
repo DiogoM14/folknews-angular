@@ -6,11 +6,17 @@ import { NewsPageComponent } from './news-page/news-page.component';
 const routes: Routes = [
   {path: '', redirectTo: "popular", pathMatch:"full", },
   {path: 'popular', component: CategoryComponent},
-  {path: 'popular/:id', component: CategoryComponent},
+  {path: 'popular/:id', component: NewsPageComponent},
   {path: 'saude', component: CategoryComponent},
+  {path: 'saude/:id', component: NewsPageComponent},
   {path: 'economia', component: CategoryComponent},
+  {path: 'economia/:id', component: NewsPageComponent},
   {path: 'desporto', component: CategoryComponent},
-  {path: 'mundo', component: NewsPageComponent}
+  {path: 'desporto/:id', component: NewsPageComponent},
+  {path: 'cultura', component: CategoryComponent},
+  {path: 'cultura/:id', component: NewsPageComponent},
+  {path: 'mundo', component: CategoryComponent},
+  {path: 'mundo/:id', component: NewsPageComponent},
 ];
 
 @NgModule({
