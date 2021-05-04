@@ -1,0 +1,128 @@
+<div class="main-container" *ngFor="let new of filteredNews">
+  <app-header></app-header>
+
+  <app-search-bar></app-search-bar>
+
+  <h1>{{ new.titulo }}</h1>
+  <hr>
+
+  <p>Equipa mantém intenção de “aliar experiência e juventude” no elenco para a próxima época.</p>
+
+  <article>
+
+    <div class="card" style="width: 18rem;">
+      <img src="./assets/alfa.jpg" class="card-img-top" alt="F1 alfa romeo">
+      <div class="card-body">
+        <p class="card-autor">MotorSport Brasil</p>
+        <p class="card-text">21/12/2020 09h36 - Atualizado há 3 horas</p>
+      </div>
+    </div>
+
+    <p>O finlandês <span>Kimi Räikkönen</span> e o italiano <span>Antonio Giovinazzi</span> vão manter-se como pilotos da <span>Alfa Romeo</span> no Campeonato do Mundo de <span>Fórmula 1</span> (F1) de 2021, confirmou nesta sexta-feira a escuderia. <br>
+      <br>
+      “Este anúncio sublinha a vontade de dar continuidade ao trabalho realizado. Kimi e Antonio constituem uma dupla sólida de pilotos, que alia a experiência ao entusiasmo da juventude”, justifica a <span>Alfa Romeo Racing</span>. <br>
+      <br>Alfa Romeo
+      <span>Giovinazzi</span>, de 26 anos, conquistou três pontos no Mundial de F1 de 2020, fortemente condicionado pela pandemia de <span>covid-19</span>, enquanto <span>Räikkönen</span>, de 41 anos, averbou dois, colocando a <span>Alfa Romeo</span> no oitavo lugar do campeonato de construtores, entre 10 equipas.
+    </p>
+
+    <div class="image">
+      <img src="./assets/alfa.jpg" alt="">
+      <p>REUTERS/MAXIM SHEMETOV</p>
+    </div>
+
+    <div class="feedback">
+      <h2>Deixe o seu Feedback</h2>
+
+      <div class="icons">
+        <img src="./assets/like.svg" alt="gosto">
+        <h3 class="red">124</h3>
+        <img src="./assets/deslike.svg" alt="não gosto">
+        <h3>7</h3>
+      </div>
+    </div>
+
+    <div class="feedback">
+      <h2>Compartilhe</h2>
+
+      <div class="share-icons">
+        <img src="./assets/whatsapp.svg" alt="gosto">
+        <img src="./assets/facebook.svg" alt="não gosto">
+        <img src="./assets/twitter.svg" alt="não gosto">
+      </div>
+    </div>
+  </article>
+  <hr>
+
+  <div class="container">
+    <h1 class="comments-title">Comentários (3)</h1>
+    <div class="be-comment-block">
+      <div class="be-comment">
+        <div class="be-img-comment">
+          <a href="blog-detail-2.html">
+            <img src="assets/images/augusto.png" alt="" class="be-ava-comment">
+          </a>
+        </div>
+        <div class="be-comment-content">
+
+          <span class="be-comment-name">
+            <a href="blog-detail-2.html">Augusto Esteves</a>
+          </span>
+          <span class="be-comment-time">
+            Jan 04, 2021 - 15:14H
+          </span>
+
+          <p class="be-comment-text">
+            Muito bom artigo, parabéns!
+          </p>
+        </div>
+      </div>
+      <div class="be-comment">
+        <div class="be-img-comment">
+          <a href="blog-detail-2.html">
+            <img src="assets/images/nuria.png" alt="" class="be-ava-comment">
+          </a>
+        </div>
+        <div class="be-comment-content">
+          <span class="be-comment-name">
+            <a href="blog-detail-2.html">Núria Carneiro</a>
+          </span>
+          <span class="be-comment-time">
+            Jan 02, 2021 - 10:07H
+          </span>
+          <p class="be-comment-text">
+            Mais um ano!!!!
+          </p>
+        </div>
+      </div>
+      <div class="be-comment">
+        <div class="be-img-comment">
+          <a href="blog-detail-2.html">
+            <img src="assets/images/joao.png" alt="" class="be-ava-comment">
+          </a>
+        </div>
+        <div class="be-comment-content">
+          <span class="be-comment-name">
+            <a href="blog-detail-2.html">João Castro</a>
+          </span>
+          <span class="be-comment-time">
+            Jan 01, 2021 - 17:47H
+          </span>
+          <p class="be-comment-text">
+            Vamos Raikkonen
+          </p>
+        </div>
+      </div>
+      <form class="form-block">
+        <div class="form-group">
+          <textarea class="form-input" required="" placeholder="Escreva um comentário..."></textarea>
+        </div>
+        <a class="btn btn-primary">Enviar</a>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <h2>FolkNews</h2>
+    <p>&copy; Copyright FolkNews S.A.</p>
+  </footer>
+</div>

@@ -61,6 +61,7 @@ import { CategoryComponent } from './category/category.component';
 import { DividerComponent } from './divider/divider.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { CategoryService } from './category/category.service';
+import { NewsPageComponent } from './news-page/news-page.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { CategoryService } from './category/category.service';
     CarouselComponent,
     CategoryComponent,
     DividerComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    NewsPageComponent
   ],
   imports: [
     HttpClientModule,
