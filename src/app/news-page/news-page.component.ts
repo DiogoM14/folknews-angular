@@ -16,12 +16,10 @@ export class NewsPageComponent implements OnInit {
   constructor(private service: CardService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    // this.getNews();
     this.initCurrentNew()
   }
 
   getNews(id: string) {
-    console.log("Rodou")
     this.service.getNews(id)
     .subscribe(response => this.news = response
       )

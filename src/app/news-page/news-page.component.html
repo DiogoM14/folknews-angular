@@ -13,8 +13,8 @@
     <div class="card" style="width: 18rem;">
       <img src="{{ new.multimediaPrincipal }}" class="card-img-top" alt="F1 alfa romeo">
       <div class="card-body">
-        <p class="card-autor">MotorSport Brasil</p>
-        <p class="card-text">21/12/2020 09h36 - Atualizado há 3 horas</p>
+        <p class="card-autor">{{ new.autores[0].nome }}</p>
+        <p class="card-text">{{ new.data | date:'yyyy-MM-dd' }}</p>
       </div>
     </div>
 
