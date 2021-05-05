@@ -19,11 +19,4 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  // getNews(id: string) {
-  //   console.log("Rodou")
-  //   this.service.getNews(id)
-  //   .subscribe(response => this.newsData = response
-  //     )
-  //   }
 }
