@@ -8,26 +8,26 @@ import { SearchBarService } from './search-bar.service';
 })
 export class SearchBarComponent implements OnInit {
 
-  news: any
-  id: string = ''
+  // news: any
+  // id: string = ''
 
   constructor(private service: SearchBarService) { }
 
   ngOnInit(): void {
-    this.initCurrentNew()
+    // this.initCurrentNew()
   }
 
-  getNews(id: string) {
-    this.service.getNews(id)
-    .subscribe(response => this.news = response
-      )
-    }
+  // getNews(id: string) {
+  //   this.service.getNews(id)
+  //   .subscribe(response => this.news = response
+  //     )
+  //   }
 
-  initCurrentNew() {
-    this.service.getNews(this.id).subscribe(response => {
-      this.news = response
-      this.news = [this.news]
-    });
+  // initCurrentNew() {
+  //   this.service.getNews(this.id).subscribe(response => {
+  //     this.news = response
+  //     this.news = [this.news]
+  //   });
 
-  }
+  // }
 }
